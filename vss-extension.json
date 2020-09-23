@@ -1,0 +1,39 @@
+{
+    "manifestVersion": 1,
+    "id": "my-first-extension",
+    "publisher": "archaitect",
+    "version": "1.0.0",
+    "name": "My First Extension",
+    "description": "A sample Visual Studio Services extension",
+    "public": false,
+    "categories": ["Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "my-hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-code-web.code-hub-group"
+            ],
+            "properties": {
+                "name": "My Hub",
+                "uri": "public/index.html"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "public/index.html",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        }
+    ]
+}
