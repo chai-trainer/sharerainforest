@@ -1,9 +1,9 @@
 {
     "manifestVersion": 1,
-    "id": "my-first-extension",
+    "id": "sharerainforest",
     "publisher": "archaitect",
     "version": "1.0.0",
-    "name": "My First Extension",
+    "name": "sharerainforest",
     "description": "A sample Visual Studio Services extension",
     "public": false,
     "categories": ["Azure Boards"],
