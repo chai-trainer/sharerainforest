@@ -457,7 +457,7 @@ class App extends React.Component<{}, IAppState> {
   private getHeaders = (): Headers => {
     let headers = new Headers();
     const user = 'user';
-    const password = 'REPLACE_WITH_PAT';
+    const password = 'cctskmxiituv2ira24kw2tig3xhxdj7kl5i5edkz6lqptlqf53eq';
     headers.append('Authorization', 'Basic ' + base64.encode(user + ':' + password));
 
     return headers;
