@@ -6,7 +6,7 @@
     "name": "sharerainforest",
     "description": "A sample Visual Studio Services extension",
     "public": false,
-    "categories": ["Azure Boards"],
+    "categories": ["Azure Repos"],
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -20,7 +20,7 @@
                 "ms.vss-code-web.code-hub-group"
             ],
             "properties": {
-                "name": "My Hub",
+                "name": "ShareRainForest",
                 "uri": "public/index.html"
             }
         }
