@@ -31,6 +31,10 @@
             "addressable": true
         },
         {
+            "path": "public",
+            "addressable": true
+        },
+        {
             "path": "build",
             "addressable": true
         },
