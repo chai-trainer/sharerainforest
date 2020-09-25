@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "sharerainforest",
     "publisher": "archaitect",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "name": "sharerainforest",
     "description": "A sample Visual Studio Services extension",
     "public": false,
@@ -21,13 +21,13 @@
             ],
             "properties": {
                 "name": "ShareRainForest",
-                "uri": "public/index.html"
+                "uri": "index.html"
             }
         }
     ],
     "files": [
         {
-            "path": "public/index.html",
+            "path": "index.html",
             "addressable": true
         },
         {
