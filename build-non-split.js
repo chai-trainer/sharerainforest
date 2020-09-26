@@ -7,7 +7,7 @@ config.optimization.splitChunks = {
 		default: false
 	}
 }
-//config.output.filename = 'static/js/main.xtn.js'
-//config.plugins[5].options.filename = 'static/css/[main.css'
-//config.plugins[5].options.moduleFilename = () => 'static/css/main.css'
+config.output.filename = 'static/js/main.js'
+config.plugins[5].options.filename = 'static/css/main.css'
+config.plugins[5].options.moduleFilename = () => 'static/css/main.css'
 config.optimization.runtimeChunk = false
