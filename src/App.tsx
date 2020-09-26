@@ -164,7 +164,7 @@ class App extends React.Component<{}, IAppState> {
     const password = SDK.getAccessToken();//'jyqx743a6zy6kd5vw4we7diexorqj6cg5gqsz557mvvw5ehkw4aa';
     console.log('password',password);
     headers.append('Authorization', 'Basic ' + base64.encode(user + ':' + password));
-
+    headers.append('Access-Control-Allow-Origin','*');
     return headers;
   }
 
