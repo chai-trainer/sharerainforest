@@ -170,7 +170,7 @@ class App extends React.Component<{}, IAppState> {
   }
 
   private async getGETRequestResponse(url: string, formatAsText?: boolean) {
-    const proxy = https://peaceful-castle-57133.herokuapp.com/;
+    const proxy = "https://peaceful-castle-57133.herokuapp.com/";
     const response = await fetch(proxy+url, {
       method: 'GET',
       headers: this.headers
