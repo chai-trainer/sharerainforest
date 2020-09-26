@@ -134,6 +134,7 @@ class App extends React.Component<{}, IAppState> {
 
     // Read the file contents of common-versions.json from odsp-next master
     const odspNextCommonVersionsUrl = 'https://dev.azure.com/emailaftabh/rainforesttest/_apis/git/repositories/rainforesttest/items?path=tsconfig.json&api-version=5.1';
+    
     const fileContentsToDebug = await this.readCommonVersionsFromMaster(odspNextCommonVersionsUrl)
     console.log(fileContentsToDebug);
 
@@ -169,7 +170,8 @@ class App extends React.Component<{}, IAppState> {
   }
 
   private async getGETRequestResponse(url: string, formatAsText?: boolean) {
-    const response = await fetch(url, {
+    const proxy = https://peaceful-castle-57133.herokuapp.com/;
+    const response = await fetch(proxy+url, {
       method: 'GET',
       headers: this.headers
     })
