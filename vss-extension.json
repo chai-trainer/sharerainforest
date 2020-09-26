@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "sharerainforest",
     "publisher": "archaitect",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "name": "sharerainforest",
     "description": "A sample Visual Studio Services extension",
     "public": false,
