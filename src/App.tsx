@@ -4,9 +4,12 @@ import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
 import { Spinner } from 'office-ui-fabric-react/lib/Spinner';
 import { Label } from 'office-ui-fabric-react/lib/Label';
 import './App.css';
-import EvergreenDetails from './EvergreenDetails'
+import EvergreenDetails from './EvergreenDetails';
+import * as SDK from "azure-devops-extension-sdk";
+import { getAccessToken } from "azure-devops-extension-sdk";
 // import HowTheToolWorks from './HowTheToolWorks';
 import { DetailsList } from "office-ui-fabric-react/lib/DetailsList";
+import { CommonServiceIds, IHostPageLayoutService } from 'azure-devops-extension-api/Common/CommonServices';
 let base64 = require('base-64');
 
 interface IAppState {
@@ -58,7 +61,21 @@ class App extends React.Component<{}, IAppState> {
       showSpinner: undefined,
       siteContents: ''
     }
+    console.log('before sdk ');
+    SDK.init();
+    this.getToken();
+    SDK.register("DevOps.HostControl",function(){
+
+    });
+    console.log('lafter sdk ');
   }
+  getToken = async (): Promise<void> => {
+    console.log('getToken start');
+    //const dialogService = await SDK.getService<IHostPageLayoutService>(CommonServiceIds.HostPageLayoutService);
+    
+  };
+
+
 
   public componentDidMount() {
     const input = document.getElementById('textField') as any;
@@ -143,7 +160,9 @@ class App extends React.Component<{}, IAppState> {
   private getHeaders = (): Headers => {
     let headers = new Headers();
     const user = 'user';
-    const password = 'jyqx743a6zy6kd5vw4we7diexorqj6cg5gqsz557mvvw5ehkw4aa';
+    console.log('before password');
+    const password = SDK.getAccessToken();//'jyqx743a6zy6kd5vw4we7diexorqj6cg5gqsz557mvvw5ehkw4aa';
+    console.log('password',password);
     headers.append('Authorization', 'Basic ' + base64.encode(user + ':' + password));
 
     return headers;
