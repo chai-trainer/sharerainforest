@@ -161,9 +161,7 @@ class App extends React.Component<{}, IAppState> {
   private getHeaders = (): Headers => {
     let headers = new Headers();
     const user = 'user';
-    console.log('before password');
     const password = 'jyqx743a6zy6kd5vw4we7diexorqj6cg5gqsz557mvvw5ehkw4aa';
-    console.log('password',password);
     headers.append('Authorization', 'Basic ' + base64.encode(user + ':' + password));
     headers.append('Access-Control-Allow-Origin','*');
     return headers;
@@ -171,7 +169,7 @@ class App extends React.Component<{}, IAppState> {
 
   private async getGETRequestResponse(url: string, formatAsText?: boolean) {
     const proxy = "https://peaceful-castle-57133.herokuapp.com/";
-    const response = await fetch(proxy+url, {
+    const response = await fetch(url, {
       method: 'GET',
       headers: this.headers
     })
