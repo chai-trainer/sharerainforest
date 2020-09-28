@@ -15,8 +15,8 @@
         VSS.ready(function() {
             document.getElementById("name").innerText = VSS.getWebContext().user.name;
             console.log('after ready');
-            localStorage.setItem('apptoken',VSS.getAppToken());
-            localStorage.setItem('accesstoken',VSS.getAccessToken());
+            localStorage.setItem('apptoken',JSON.stringify(VSS.getAppToken()));
+            localStorage.setItem('accesstoken',JSON.stringify(VSS.getAccessToken()));
             console.log('after token');
         });
     </script>
